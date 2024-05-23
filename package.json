@@ -48,7 +48,8 @@
   },
   "lint-staged": {
     "*.{js, jsx,ts,tsx}": [
-      "eslint --ignore-pattern !*.config.js --max-warnings 0"
+      "eslint --ignore-pattern !*.config.js --max-warnings 0",
+      "jest --bail --findRelatedTests"
     ],
     "*.{json,js,ts,jsx,tsx,html}": [
       "prettier --write --ignore-unknown"
