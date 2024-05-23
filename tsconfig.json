@@ -1,33 +1,36 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": ".",
-    "paths": {
-      "@/material/*": ["src/lib/components/material/*"],
-      "@/elements/*": ["src/lib/components/common/elements/*"],
-      "@/layouts/*": ["src/lib/components/common/layouts/*"],
-      "@/providers/*": ["src/lib/components/utility/providers/*"],
-      "@/features/*": ["src/lib/components/features/*"],
-      "@/themes/*": ["src/lib/themes/*"],
-      "@/types/*": ["src/lib/types/*"],
-      "@/utils/*": ["src/lib/utils/*"],
-      "@/assets/*": ["src/lib/assets/*"],
-      "@/mock/*": ["src/mock/*"]
-    }
-  },
-  "include": ["src"]
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "baseUrl": "./src",
+        "paths": {
+            "@material/*": ["lib/components/material/*"],
+            "@elements/*": ["lib/components/common/elements/*"],
+            "@layouts/*": ["lib/components/common/layouts/*"],
+            "@providers/*": ["lib/components/utility/providers/*"],
+            "@features/*": ["lib/components/features/*"],
+            "@themes/*": ["lib/themes/*"],
+            "@types/*": ["lib/types/*"],
+            "@utils/*": ["lib/utils/*"],
+            "@assets/*": ["lib/assets/*"]
+        }
+    },
+    "include": [
+        "src/**/*",
+        "test/**/*" // need to include test dirs
+    ],
+    "exclude": ["node_modules", "**/node_modules/*"]
 }
