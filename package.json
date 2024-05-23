@@ -20,11 +20,11 @@
     "yup": "^1.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --watchAll=false --passWithNoTests",
-    "test:watch": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test --watchAll=false --passWithNoTests",
+    "test:watch": "craco test",
+    "eject": "craco eject",
     "post-install": "npm i --save-dev husky && npm run prepare",
     "prepare": "husky install"
   },
@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@craco/craco": "^7.1.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^15.0.6",
     "@testing-library/user-event": "^13.5.0",
