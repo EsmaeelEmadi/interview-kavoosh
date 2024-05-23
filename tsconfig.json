@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,9 +14,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/material/*": ["src/lib/components/material/*"],
+      "@/elements/*": ["src/lib/components/common/elements/*"],
+      "@/layouts/*": ["src/lib/components/common/layouts/*"],
+      "@/providers/*": ["src/lib/components/utility/providers/*"],
+      "@/features/*": ["src/lib/components/features/*"],
+      "@/themes/*": ["src/lib/themes/*"],
+      "@/types/*": ["src/lib/types/*"],
+      "@/utils/*": ["src/lib/utils/*"],
+      "@/assets/*": ["src/lib/assets/*"],
+      "@/mock/*": ["src/mock/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
