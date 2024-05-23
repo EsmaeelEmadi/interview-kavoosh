@@ -14,7 +14,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "post-install": "npx husky-init && npm i --save-dev husky && npm run prepare",
+    "post-install": "npm i --save-dev husky && npm run prepare",
     "prepare": "husky install"
   },
   "eslintConfig": {
