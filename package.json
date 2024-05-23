@@ -12,7 +12,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false",
+    "test:watch": "react-scripts test",
     "eject": "react-scripts eject",
     "post-install": "npm i --save-dev husky && npm run prepare",
     "prepare": "husky install"
@@ -49,7 +50,7 @@
   "lint-staged": {
     "*.{js, jsx,ts,tsx}": [
       "eslint --ignore-pattern !*.config.js --max-warnings 0",
-      "jest --bail --findRelatedTests"
+      "npm run test"
     ],
     "*.{json,js,ts,jsx,tsx,html}": [
       "prettier --write --ignore-unknown"
