@@ -1,70 +1,85 @@
 {
-  "name": "kavoosh",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@dnd-kit/core": "^6.1.0",
-    "@emotion/cache": "^11.11.0",
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^5.15.16",
-    "@mui/lab": "^5.0.0-alpha.170",
-    "@mui/material": "^5.15.16",
-    "formik": "^2.4.6",
-    "formik-mui": "^5.0.0-alpha.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4",
-    "yup": "^1.4.0"
-  },
-  "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test --watchAll=false --passWithNoTests",
-    "test:watch": "craco test",
-    "eject": "craco eject",
-    "post-install": "npm i --save-dev husky && npm run prepare",
-    "prepare": "husky install"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@craco/craco": "^7.1.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^15.0.6",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.97",
-    "@types/react": "^18.3.2",
-    "@types/react-dom": "^18.3.0",
-    "husky": "^8.0.3"
-  },
-  "lint-staged": {
-    "*.{js, jsx,ts,tsx}": [
-      "eslint --ignore-pattern !*.config.js --max-warnings 0",
-      "npm run test"
-    ],
-    "*.{json,js,ts,jsx,tsx,html}": [
-      "prettier --write --ignore-unknown"
-    ]
-  }
+    "name": "kavoosh",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@dnd-kit/core": "^6.1.0",
+        "@emotion/cache": "^11.11.0",
+        "@emotion/react": "^11.11.4",
+        "@emotion/styled": "^11.11.5",
+        "@mui/icons-material": "^5.15.16",
+        "@mui/lab": "^5.0.0-alpha.170",
+        "@mui/material": "^5.15.16",
+        "formik": "^2.4.6",
+        "formik-mui": "^5.0.0-alpha.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-scripts": "5.0.1",
+        "remove": "^0.1.5",
+        "typescript": "^4.9.5",
+        "web-vitals": "^2.1.4",
+        "yup": "^1.4.0"
+    },
+    "scripts": {
+        "start": "craco start",
+        "build": "craco build",
+        "test": "react-scripts test --watchAll=false --passWithNoTests",
+        "test:watch": "react-scripts test",
+        "eject": "react-scripts eject",
+        "post-install": "npm i --save-dev husky && npm run prepare",
+        "prepare": "husky install"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "@babel/preset-typescript": "^7.24.1",
+        "@craco/craco": "^7.1.0",
+        "@testing-library/jest-dom": "^5.17.0",
+        "@testing-library/react": "^15.0.6",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/jest": "^27.5.2",
+        "@types/node": "^16.18.97",
+        "@types/react": "^18.3.2",
+        "@types/react-dom": "^18.3.0",
+        "@typescript-eslint/parser": "^5.62.0",
+        "eslint-import-resolver-typescript": "^3.6.1",
+        "eslint-plugin-import": "^2.29.1",
+        "husky": "^8.0.3",
+        "ts-jest": "^29.1.3"
+    },
+    "lint-staged": {
+        "*.{js, jsx,ts,tsx}": [
+            "eslint --ignore-pattern !*.config.js --max-warnings 0"
+        ],
+        "*.{json,js,ts,jsx,tsx,html}": [
+            "prettier --write --ignore-unknown"
+        ]
+    },
+    "jest": {
+        "moduleNameMapper": {
+            "^@material(.*)$": "<rootDir>/src/lib/components/material$1",
+            "^@features(.*)$": "<rootDir>/src/lib/components/features$1",
+            "^@themes(.*)$": "<rootDir>/src/lib/themes$1"
+        },
+        "transform": {
+            "^.+\\.jsx?$": "babel-jest"
+        }
+    }
 }
