@@ -1,3 +1,3 @@
-import Grid2 from '@mui/material/Unstable_Grid2/Grid2';
+import Grid from '@mui/material/Grid';
 
-export default Grid2;
+export default Grid;
