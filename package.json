@@ -23,8 +23,8 @@
     "scripts": {
         "start": "craco start",
         "build": "craco build",
-        "test": "react-scripts test --watchAll=false --passWithNoTests",
-        "test:watch": "react-scripts test",
+        "test": "craco test --watchAll=false --passWithNoTests",
+        "test:watch": "craco test",
         "eject": "react-scripts eject",
         "post-install": "npm i --save-dev husky && npm run prepare",
         "prepare": "husky install"
@@ -66,20 +66,11 @@
     },
     "lint-staged": {
         "*.{js, jsx,ts,tsx}": [
-            "eslint --ignore-pattern !*.config.js --max-warnings 0"
+            "eslint --ignore-pattern !*.config.js --max-warnings 0",
+            "npm run test"
         ],
         "*.{json,js,ts,jsx,tsx,html}": [
             "prettier --write --ignore-unknown"
         ]
-    },
-    "jest": {
-        "moduleNameMapper": {
-            "^@material(.*)$": "<rootDir>/src/lib/components/material$1",
-            "^@features(.*)$": "<rootDir>/src/lib/components/features$1",
-            "^@themes(.*)$": "<rootDir>/src/lib/themes$1"
-        },
-        "transform": {
-            "^.+\\.jsx?$": "babel-jest"
-        }
     }
 }
