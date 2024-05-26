@@ -56,7 +56,6 @@
   display: flex;
   flex-grow: 1;
   align-items: center;
-  /* padding: 18px 20px; */
   background-color: white;
   box-shadow: var(--box-shadow);
   outline: none;
@@ -95,7 +94,6 @@
 
   &.disabled {
     color: #999;
-    /* background-color: #f1f1f1; */
     &:focus {
       box-shadow: 0 0px 4px 1px rgba(0, 0, 0, 0.1), var(--box-shadow);
     }
@@ -104,7 +102,6 @@
 
   &.dragOverlay {
     cursor: inherit;
-    /* box-shadow: 0 0px 6px 2px $focused-outline-color; */
     animation: pop 200ms cubic-bezier(0.18, 0.67, 0.6, 1.22);
     transform: scale(var(--scale));
     box-shadow: var(--box-shadow-picked-up);
