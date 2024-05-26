@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Page from './Page';
 
-test('renders learn react link', () => {
+describe('Page component', () => {
+  it('test if todo-board is on the page', () => {
     render(<Page />);
-    const linkElement = screen.getByText(/Kavoosh/i);
-    expect(linkElement).toBeInTheDocument();
+  });
+
+  it('renders TodoBoard component', () => {
+    const { getByTestId } = render(<Page />);
+    const todoBoardElement = getByTestId('todo-board');
+    expect(todoBoardElement).toBeInTheDocument();
+  });
 });
