@@ -367,7 +367,7 @@ const MultipleContainers: FC<IMultipleContainersProps> = ({
         items={[...containers, PLACEHOLDER_ID]}
         strategy={vertical ? verticalListSortingStrategy : horizontalListSortingStrategy}
       >
-        <Grid container>
+        <Grid container data-testid='multi-container-board'>
           {containers.map((containerId) => (
             <DroppableContainer
               key={containerId}
@@ -490,7 +490,7 @@ const MultipleContainers: FC<IMultipleContainersProps> = ({
       }
     };
     return (
-      <Container label={`Column ${containerId}`}>
+      <Container label={`${containerId}`}>
         {items[containerId].map((item, index) => (
           <Item
             onEdit={handleEdit}

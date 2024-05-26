@@ -107,6 +107,7 @@ const Item = memo(
         })
       ) : (
         <li
+          data-testid={`task-item-${task?.status}`}
           className={classNames(
             styles.Wrapper,
             fadeIn && styles.fadeIn,

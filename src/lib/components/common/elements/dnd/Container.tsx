@@ -13,7 +13,17 @@ export interface IContainerProps {
 const Container = forwardRef<HTMLDivElement, IContainerProps>(
   ({ children, label, placeholder, ...props }, ref) => {
     return (
-      <Grid lg={4} md={12} sm={12} xs={12} item padding={theme.spacing(2)} {...props} ref={ref}>
+      <Grid
+        lg={4}
+        md={12}
+        sm={12}
+        xs={12}
+        item
+        padding={theme.spacing(2)}
+        {...props}
+        ref={ref}
+        data-testid={`container-${label}`}
+      >
         <Paper
           elevation={0}
           square={false}

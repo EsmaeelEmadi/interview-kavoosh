@@ -79,7 +79,7 @@ const TodoBoard: FC = () => {
 
   return (
     <>
-      <Container maxWidth='xl' sx={{ paddingY: 6 }}>
+      <Container maxWidth='xl' sx={{ paddingY: 6 }} data-testid='todo-board'>
         <Stack gap={4}>
           <Grid container direction='column'>
             <Typography variant='h4'>Todo Board</Typography>
