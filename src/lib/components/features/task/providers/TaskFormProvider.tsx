@@ -27,9 +27,6 @@ const INITIAL_VALUES: TFormValues = {
 };
 
 // VALIDATIONS
-/**
- * If we want to implement path we need to create a new validation schema
- */
 const formValidationSchema = Yup.object().shape({
   title: titleSchema,
   description: descriptionSchema,
