@@ -18,13 +18,13 @@ module.exports = {
     configure: {
       moduleNameMapper: {
         '^@material(.*)$': '<rootDir>/src/lib/components/material$1',
-        '^@elements(.*)$': '<rootDir>/src/lib/components/elements$1',
+        '^@elements(.*)$': '<rootDir>/src/lib/components/common/elements$1',
         '^@layouts(.*)$': '<rootDir>/src/lib/components/layouts$1',
         '^@features(.*)$': '<rootDir>/src/lib/components/features$1',
         '^@providers(.*)$': '<rootDir>/src/lib/components/utility/providers$1',
         '^@themes(.*)$': '<rootDir>/src/lib/themes$1',
         '^@types_(.*)$': '<rootDir>/src/lib/types$1',
-        '^@themes(.*)$': '<rootDir>/src/lib/utils$1',
+        '^@utils(.*)$': '<rootDir>/src/lib/utils$1',
         '^@assets(.*)$': '<rootDir>/src/lib/assets1',
       },
     },
