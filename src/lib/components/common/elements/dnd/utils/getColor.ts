@@ -1,4 +1,6 @@
-// import { UniqueIdentifier } from '@dnd-kit/core';
+import { theme } from '@themes/material/mainTheme';
+
+// TYPES
 import { TaskStatus } from '@types_/models/task';
 
 type TGetColor = (containerName?: keyof typeof TaskStatus) => string | undefined;
@@ -6,11 +8,11 @@ type TGetColor = (containerName?: keyof typeof TaskStatus) => string | undefined
 const getColor: TGetColor = (containerName) => {
   switch (containerName) {
     case TaskStatus.TODO:
-      return '#7193f1';
+      return theme.palette.warning.light;
     case TaskStatus.DOING:
-      return '#ffda6c';
+      return theme.palette.info.light;
     case TaskStatus.DONE:
-      return '#00bcd4';
+      return theme.palette.success.light;
   }
 
   return undefined;
