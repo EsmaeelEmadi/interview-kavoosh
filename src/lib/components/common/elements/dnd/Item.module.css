@@ -118,11 +118,11 @@
     transform: translateY(-50%);
     left: 0;
     height: 100%;
-    width: 3px;
+    width: 6px;
     display: block;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    /* background-color: var(--color); */
+    background-color: var(--color);
   }
 
   &:hover {
