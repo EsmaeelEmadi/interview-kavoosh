@@ -26,7 +26,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test --watchAll=false --passWithNoTests",
+    "test": "craco test --watchAll=false --passWithNoTests -bail",
     "test:watch": "craco test",
     "eject": "react-scripts eject",
     "post-install": "npm i --save-dev husky && npm run prepare",
