@@ -17,6 +17,7 @@ export { default as Container } from './compnents/Container';
 export { default as Dialog } from './compnents/Dialog';
 export { default as DialogActions } from './compnents/DialogActions';
 export { default as DialogContent } from './compnents/DialogContent';
+export { default as DialogContentText } from './compnents/DialogContentText';
 export { default as DialogTitle } from './compnents/DialogTitle';
 export { default as Divider } from './compnents/Divider';
 export { default as Drawer } from './compnents/Drawer';
