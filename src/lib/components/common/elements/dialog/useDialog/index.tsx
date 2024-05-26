@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { FC } from 'react';
+
+// TYPES
+import type { FC } from 'react';
 
 interface IDialogActions<T> {
   open: () => void;
