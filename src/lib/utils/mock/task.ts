@@ -1,27 +1,46 @@
 import { faker } from '@faker-js/faker';
 import { ITask, TaskStatus } from '@types_/models/task';
 
-const STORAGE_PATH = 'kavoosh';
+// NOTE: it is store the storage on env
+export const STORAGE_PATH = 'kavoosh';
 
-class TaskMockDataProvider {
+export class TaskMockDataProvider {
   private lastId: number;
   private data: Map<number, ITask>;
+  private storagePath: string;
 
-  constructor() {
+  constructor(storagePath?: string) {
+    this.storagePath = storagePath ?? STORAGE_PATH;
+
     this.lastId = 0;
     this.data = new Map();
     this.read();
   }
 
+  // just for test
+  public clear() {
+    this.data = new Map();
+    this.store();
+  }
+
+  // just for test
+  public getCache(): ITask[] {
+    const cache = localStorage.getItem(this.storagePath);
+    if (cache) {
+      return JSON.parse(cache);
+    }
+
+    return [];
+  }
+
   private store() {
     const arrayFromData = Array.from(this.data.values());
     const strignData = arrayFromData.length ? JSON.stringify(arrayFromData) : '';
-    localStorage.setItem(STORAGE_PATH, strignData);
+    localStorage.setItem(this.storagePath, strignData);
   }
 
   private read() {
-    const cache = localStorage.getItem(STORAGE_PATH);
-    console.log({ cache });
+    const cache = localStorage.getItem(this.storagePath);
     if (cache && cache.length) {
       (JSON.parse(cache) as ITask[]).forEach((task) => {
         if (task.id > this.lastId) {
@@ -118,6 +137,11 @@ class TaskMockDataProvider {
   }
 }
 
-const singleton = new TaskMockDataProvider();
+let singleton = new TaskMockDataProvider();
 
 export default singleton;
+
+// for test
+export const init = (storagePath?: string) => {
+  singleton = new TaskMockDataProvider(storagePath);
+};
